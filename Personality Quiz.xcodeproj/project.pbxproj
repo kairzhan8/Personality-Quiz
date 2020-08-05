@@ -14,6 +14,10 @@
 		5506DF3324DA903C0099A34F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF3224DA903C0099A34F /* Assets.xcassets */; };
 		5506DF3624DA903C0099A34F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF3424DA903C0099A34F /* LaunchScreen.storyboard */; };
 		5506DF3F24DA9EFD0099A34F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506DF3E24DA9EFD0099A34F /* Question.swift */; };
+		5506DF4524DAA0510099A34F /* ResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506DF4424DAA0510099A34F /* ResponseType.swift */; };
+		5506DF4724DAA0930099A34F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506DF4624DAA0930099A34F /* Answer.swift */; };
+		5506DF4924DAA1170099A34F /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506DF4824DAA1170099A34F /* AnimalType.swift */; };
+		5506DF4B24DAA1F50099A34F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF4A24DAA1F50099A34F /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		5506DF3524DA903C0099A34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5506DF3724DA903C0099A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5506DF3E24DA9EFD0099A34F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5506DF4424DAA0510099A34F /* ResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseType.swift; sourceTree = "<group>"; };
+		5506DF4624DAA0930099A34F /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		5506DF4824DAA1170099A34F /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
+		5506DF4A24DAA1F50099A34F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 		5506DF1D24DA90320099A34F = {
 			isa = PBXGroup;
 			children = (
+				5506DF4A24DAA1F50099A34F /* Default-568h@2x.png */,
 				5506DF2824DA90320099A34F /* Personality Quiz */,
 				5506DF2724DA90320099A34F /* Products */,
 			);
@@ -71,6 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				5506DF3E24DA9EFD0099A34F /* Question.swift */,
+				5506DF4424DAA0510099A34F /* ResponseType.swift */,
+				5506DF4624DAA0930099A34F /* Answer.swift */,
+				5506DF4824DAA1170099A34F /* AnimalType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5506DF3624DA903C0099A34F /* LaunchScreen.storyboard in Resources */,
+				5506DF4B24DAA1F50099A34F /* Default-568h@2x.png in Resources */,
 				5506DF3324DA903C0099A34F /* Assets.xcassets in Resources */,
 				5506DF3124DA90320099A34F /* Main.storyboard in Resources */,
 			);
@@ -184,7 +197,10 @@
 				5506DF2E24DA90320099A34F /* ViewController.swift in Sources */,
 				5506DF3F24DA9EFD0099A34F /* Question.swift in Sources */,
 				5506DF2A24DA90320099A34F /* AppDelegate.swift in Sources */,
+				5506DF4724DAA0930099A34F /* Answer.swift in Sources */,
 				5506DF2C24DA90320099A34F /* SceneDelegate.swift in Sources */,
+				5506DF4524DAA0510099A34F /* ResponseType.swift in Sources */,
+				5506DF4924DAA1170099A34F /* AnimalType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 854Z63GAJD;
-				INFOPLIST_FILE = "Personality Quiz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Personality Quiz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,7 +364,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 854Z63GAJD;
-				INFOPLIST_FILE = "Personality Quiz/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Personality Quiz/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

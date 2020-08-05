@@ -90,22 +90,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="h11-Ja-vXo">
-                                <rect key="frame" x="20" y="271.5" width="335" height="168"/>
+                                <rect key="frame" x="20" y="259.5" width="335" height="192"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYm-QD-odA">
-                                        <rect key="frame" x="144.5" y="0.0" width="46" height="30"/>
+                                        <rect key="frame" x="138.5" y="0.0" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-tC-Adq">
-                                        <rect key="frame" x="144.5" y="46" width="46" height="30"/>
+                                        <rect key="frame" x="138.5" y="52" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smq-xV-uOB">
-                                        <rect key="frame" x="144.5" y="92" width="46" height="30"/>
+                                        <rect key="frame" x="138.5" y="104" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9b-yG-zSc">
-                                        <rect key="frame" x="144.5" y="138" width="46" height="30"/>
+                                        <rect key="frame" x="138.5" y="156" width="58" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -220,12 +224,6 @@
                             <constraint firstItem="z4j-H8-RkY" firstAttribute="centerY" secondItem="rOX-Cr-h2e" secondAttribute="centerY" constant="32" id="kpY-8j-ScG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M8v-sg-esz"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="h11-Ja-vXo"/>
-                                <exclude reference="AyD-T5-D7B"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="lfe-NQ-mKk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="c3P-fO-hrM"/>
