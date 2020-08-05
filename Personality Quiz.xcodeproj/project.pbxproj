@@ -13,6 +13,7 @@
 		5506DF3124DA90320099A34F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF2F24DA90320099A34F /* Main.storyboard */; };
 		5506DF3324DA903C0099A34F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF3224DA903C0099A34F /* Assets.xcassets */; };
 		5506DF3624DA903C0099A34F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5506DF3424DA903C0099A34F /* LaunchScreen.storyboard */; };
+		5506DF3F24DA9EFD0099A34F /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506DF3E24DA9EFD0099A34F /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5506DF3224DA903C0099A34F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5506DF3524DA903C0099A34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5506DF3724DA903C0099A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5506DF3E24DA9EFD0099A34F /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		5506DF2824DA90320099A34F /* Personality Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				5506DF2924DA90320099A34F /* AppDelegate.swift */,
-				5506DF2B24DA90320099A34F /* SceneDelegate.swift */,
-				5506DF2D24DA90320099A34F /* ViewController.swift */,
-				5506DF2F24DA90320099A34F /* Main.storyboard */,
-				5506DF3224DA903C0099A34F /* Assets.xcassets */,
-				5506DF3424DA903C0099A34F /* LaunchScreen.storyboard */,
-				5506DF3724DA903C0099A34F /* Info.plist */,
+				5506DF3D24DA9EE50099A34F /* Model */,
+				5506DF4124DA9F240099A34F /* View */,
+				5506DF4024DA9F090099A34F /* Controller */,
+				5506DF4224DA9F4C0099A34F /* Supporting Files */,
+				5506DF4324DA9FA80099A34F /* Resources */,
 			);
 			path = "Personality Quiz";
+			sourceTree = "<group>";
+		};
+		5506DF3D24DA9EE50099A34F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5506DF3E24DA9EFD0099A34F /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5506DF4024DA9F090099A34F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5506DF2D24DA90320099A34F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5506DF4124DA9F240099A34F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5506DF2F24DA90320099A34F /* Main.storyboard */,
+				5506DF3424DA903C0099A34F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5506DF4224DA9F4C0099A34F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5506DF2924DA90320099A34F /* AppDelegate.swift */,
+				5506DF2B24DA90320099A34F /* SceneDelegate.swift */,
+				5506DF3724DA903C0099A34F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5506DF4324DA9FA80099A34F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5506DF3224DA903C0099A34F /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5506DF2E24DA90320099A34F /* ViewController.swift in Sources */,
+				5506DF3F24DA9EFD0099A34F /* Question.swift in Sources */,
 				5506DF2A24DA90320099A34F /* AppDelegate.swift in Sources */,
 				5506DF2C24DA90320099A34F /* SceneDelegate.swift in Sources */,
 			);
