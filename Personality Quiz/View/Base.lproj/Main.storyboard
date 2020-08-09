@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Introduction View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="IntroductionViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HH4-ft-NT9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +85,7 @@
         <!--Вопрос №-->
         <scene sceneID="5UR-qK-bxq">
             <objects>
-                <viewController id="GA2-mi-TYQ" sceneMemberID="viewController">
+                <viewController id="GA2-mi-TYQ" customClass="QuestionViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rOX-Cr-h2e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,21 +97,33 @@
                                         <rect key="frame" x="138.5" y="0.0" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="GA2-mi-TYQ" eventType="touchUpInside" id="sNo-Ec-0BE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-tC-Adq">
                                         <rect key="frame" x="138.5" y="52" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="GA2-mi-TYQ" eventType="touchUpInside" id="w1E-lN-qUT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smq-xV-uOB">
                                         <rect key="frame" x="138.5" y="104" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="GA2-mi-TYQ" eventType="touchUpInside" id="fo1-5e-pIm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9b-yG-zSc">
                                         <rect key="frame" x="138.5" y="156" width="58" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="GA2-mi-TYQ" eventType="touchUpInside" id="Ej0-jH-j98"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -177,6 +190,9 @@
                                         <rect key="frame" x="0.0" y="156" width="335" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="GA2-mi-TYQ" eventType="touchUpInside" id="HJM-an-6Td"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -207,44 +223,77 @@
                                         <rect key="frame" x="0.0" y="54" width="335" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Ответить"/>
+                                        <connections>
+                                            <segue destination="FJ8-k4-au6" kind="show" identifier="resultSegue" id="ghB-Hs-a2o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-IB-MYl">
+                                <rect key="frame" x="20" y="116" width="335" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p69-m4-IQR">
+                                <rect key="frame" x="0.0" y="108" width="375" height="8"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="p69-m4-IQR" firstAttribute="leading" secondItem="rOX-Cr-h2e" secondAttribute="leading" id="2rq-qv-xar"/>
                             <constraint firstItem="M8v-sg-esz" firstAttribute="trailing" secondItem="AyD-T5-D7B" secondAttribute="trailing" constant="20" id="6Y2-mc-kKJ"/>
                             <constraint firstItem="AyD-T5-D7B" firstAttribute="centerY" secondItem="rOX-Cr-h2e" secondAttribute="centerY" constant="32" id="L16-9F-J5f"/>
+                            <constraint firstItem="fi1-IB-MYl" firstAttribute="top" secondItem="p69-m4-IQR" secondAttribute="bottom" id="MwO-oe-01y"/>
                             <constraint firstItem="AyD-T5-D7B" firstAttribute="leading" secondItem="M8v-sg-esz" secondAttribute="leading" constant="20" id="N3N-zg-5SN"/>
                             <constraint firstItem="M8v-sg-esz" firstAttribute="trailing" secondItem="z4j-H8-RkY" secondAttribute="trailing" constant="20" id="VDG-uW-OVD"/>
                             <constraint firstItem="M8v-sg-esz" firstAttribute="trailing" secondItem="h11-Ja-vXo" secondAttribute="trailing" constant="20" id="VZ9-Pq-xoy"/>
+                            <constraint firstItem="fi1-IB-MYl" firstAttribute="leading" secondItem="M8v-sg-esz" secondAttribute="leading" constant="20" id="Zmx-TY-Efd"/>
+                            <constraint firstAttribute="trailing" secondItem="p69-m4-IQR" secondAttribute="trailing" id="aj5-qb-mjJ"/>
                             <constraint firstItem="h11-Ja-vXo" firstAttribute="leading" secondItem="M8v-sg-esz" secondAttribute="leading" constant="20" id="cNo-n2-J1R"/>
                             <constraint firstItem="h11-Ja-vXo" firstAttribute="centerY" secondItem="rOX-Cr-h2e" secondAttribute="centerY" constant="32" id="fHX-u9-5Ue"/>
+                            <constraint firstItem="fi1-IB-MYl" firstAttribute="top" secondItem="M8v-sg-esz" secondAttribute="top" constant="8" id="gNQ-1r-bGr"/>
                             <constraint firstItem="z4j-H8-RkY" firstAttribute="leading" secondItem="M8v-sg-esz" secondAttribute="leading" constant="20" id="hyW-9n-IUb"/>
                             <constraint firstItem="z4j-H8-RkY" firstAttribute="centerY" secondItem="rOX-Cr-h2e" secondAttribute="centerY" constant="32" id="kpY-8j-ScG"/>
+                            <constraint firstItem="M8v-sg-esz" firstAttribute="trailing" secondItem="fi1-IB-MYl" secondAttribute="trailing" constant="20" id="qeD-Cy-4LL"/>
+                            <constraint firstItem="p69-m4-IQR" firstAttribute="top" secondItem="M8v-sg-esz" secondAttribute="top" id="zMT-BV-Hqd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M8v-sg-esz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="lfe-NQ-mKk">
                         <barButtonItem key="backBarButtonItem" title="Back" id="c3P-fO-hrM"/>
-                        <barButtonItem key="rightBarButtonItem" title="3=&gt;" id="n9L-nL-p2X">
-                            <connections>
-                                <segue destination="FJ8-k4-au6" kind="show" id="A67-i6-8vi"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="FJ8-k4-au6" kind="show" identifier="resultSegue" id="enu-ak-uxz"/>
+                        <outlet property="multipleStackView" destination="z4j-H8-RkY" id="hWv-Ly-Ra7"/>
+                        <outlet property="questionLabel" destination="fi1-IB-MYl" id="RH6-0d-DW6"/>
+                        <outlet property="questionProgressView" destination="p69-m4-IQR" id="L2m-Tj-PTx"/>
+                        <outlet property="rangedSlider" destination="MwS-gC-qke" id="fOQ-Qh-7vD"/>
+                        <outlet property="rangedStackView" destination="AyD-T5-D7B" id="H2N-e2-9w7"/>
+                        <outlet property="singleStackView" destination="h11-Ja-vXo" id="ZNW-Np-mTB"/>
+                        <outletCollection property="singleButtons" destination="cYm-QD-odA" collectionClass="NSMutableArray" id="g63-jI-kJU"/>
+                        <outletCollection property="singleButtons" destination="aQK-tC-Adq" collectionClass="NSMutableArray" id="WVf-ez-cMz"/>
+                        <outletCollection property="singleButtons" destination="smq-xV-uOB" collectionClass="NSMutableArray" id="EQ9-5h-RwM"/>
+                        <outletCollection property="singleButtons" destination="n9b-yG-zSc" collectionClass="NSMutableArray" id="RRD-tU-ClA"/>
+                        <outletCollection property="multipleLabels" destination="ZOg-J2-UNk" collectionClass="NSMutableArray" id="Fyv-zA-p1t"/>
+                        <outletCollection property="multipleLabels" destination="SfA-qN-oDj" collectionClass="NSMutableArray" id="s2R-xd-nF0"/>
+                        <outletCollection property="multipleLabels" destination="Y90-Lx-VAX" collectionClass="NSMutableArray" id="CQ3-9x-oL1"/>
+                        <outletCollection property="multipleLabels" destination="CeJ-KR-jkZ" collectionClass="NSMutableArray" id="r8W-4c-fTt"/>
+                        <outletCollection property="rangedLabels" destination="7lB-2E-BHE" collectionClass="NSMutableArray" id="Lap-9j-coo"/>
+                        <outletCollection property="rangedLabels" destination="Xi5-A1-2uU" collectionClass="NSMutableArray" id="2o7-ny-fPw"/>
+                        <outletCollection property="multipleSwitches" destination="jKz-8K-5vh" collectionClass="NSMutableArray" id="rpc-Xq-KFQ"/>
+                        <outletCollection property="multipleSwitches" destination="u6G-4C-Ey6" collectionClass="NSMutableArray" id="vUw-ce-pTL"/>
+                        <outletCollection property="multipleSwitches" destination="VDd-nC-q8S" collectionClass="NSMutableArray" id="ttF-8H-U9q"/>
+                        <outletCollection property="multipleSwitches" destination="7yb-bJ-Gk9" collectionClass="NSMutableArray" id="iW6-Zo-D0P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZl-2T-sWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="130"/>
+            <point key="canvasLocation" x="1597.5999999999999" y="129.98500749625188"/>
         </scene>
         <!--Результаты-->
         <scene sceneID="1FN-rg-3LX">
             <objects>
-                <viewController id="FJ8-k4-au6" sceneMemberID="viewController">
+                <viewController id="FJ8-k4-au6" customClass="ResultViewController" customModule="Personality_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wGZ-0x-RSU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +301,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="736-SD-0CX">
                                 <rect key="frame" x="20" y="274" width="335" height="163.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-f0-yjK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы - 🐶!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KV3-f0-yjK">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
@@ -276,8 +325,16 @@
                         <viewLayoutGuide key="safeArea" id="bVg-qu-aRq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результаты" id="Cdz-dG-Mvf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fAs-KF-czq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fAs-KF-czq">
+                            <connections>
+                                <action selector="done:" destination="FJ8-k4-au6" id="chx-Sz-4lF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="KV3-f0-yjK" id="x1e-ue-2NG"/>
+                        <outlet property="resultDefinitionLabel" destination="eYs-X8-iwA" id="f0Y-Ze-74S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehj-cp-9nw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +345,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BPT-Ku-Lb4" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Z3a-qV-a7Q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="uW6-DQ-Zxz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -302,7 +360,4 @@
             <point key="canvasLocation" x="847" y="130"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="enu-ak-uxz"/>
-    </inferredMetricsTieBreakers>
 </document>
